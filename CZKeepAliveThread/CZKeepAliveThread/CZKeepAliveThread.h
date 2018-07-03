@@ -20,6 +20,10 @@ typedef void(^CZTaskBlock)(void);
  */
 - (void)executeTaskWithBlock:(CZTaskBlock)task;
 
+
+/**
+ terminate the thread
+ */
 - (void)kill;
 
 @end
