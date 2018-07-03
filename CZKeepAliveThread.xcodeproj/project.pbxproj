@@ -13,6 +13,7 @@
 		88D434A420EBCA5E0068B878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D434A320EBCA5E0068B878 /* Assets.xcassets */; };
 		88D434A720EBCA5E0068B878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D434A520EBCA5E0068B878 /* LaunchScreen.storyboard */; };
 		88D434AA20EBCA5E0068B878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D434A920EBCA5E0068B878 /* main.m */; };
+		88D434B320EBCAD30068B878 /* CZKeepAliveThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D434B220EBCAD30068B878 /* CZKeepAliveThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		88D434A620EBCA5E0068B878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88D434A820EBCA5E0068B878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D434A920EBCA5E0068B878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88D434B120EBCAD30068B878 /* CZKeepAliveThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZKeepAliveThread.h; sourceTree = "<group>"; };
+		88D434B220EBCAD30068B878 /* CZKeepAliveThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZKeepAliveThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		88D4349920EBCA5C0068B878 /* CZKeepAliveThread */ = {
 			isa = PBXGroup;
 			children = (
+				88D434B020EBCA960068B878 /* CZKeepAliveThread */,
 				88D4349A20EBCA5C0068B878 /* AppDelegate.h */,
 				88D4349B20EBCA5C0068B878 /* AppDelegate.m */,
 				88D4349D20EBCA5C0068B878 /* ViewController.h */,
@@ -67,6 +71,15 @@
 				88D434A520EBCA5E0068B878 /* LaunchScreen.storyboard */,
 				88D434A820EBCA5E0068B878 /* Info.plist */,
 				88D434A920EBCA5E0068B878 /* main.m */,
+			);
+			path = CZKeepAliveThread;
+			sourceTree = "<group>";
+		};
+		88D434B020EBCA960068B878 /* CZKeepAliveThread */ = {
+			isa = PBXGroup;
+			children = (
+				88D434B120EBCAD30068B878 /* CZKeepAliveThread.h */,
+				88D434B220EBCAD30068B878 /* CZKeepAliveThread.m */,
 			);
 			path = CZKeepAliveThread;
 			sourceTree = "<group>";
@@ -142,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D4349F20EBCA5C0068B878 /* ViewController.m in Sources */,
+				88D434B320EBCAD30068B878 /* CZKeepAliveThread.m in Sources */,
 				88D434AA20EBCA5E0068B878 /* main.m in Sources */,
 				88D4349C20EBCA5C0068B878 /* AppDelegate.m in Sources */,
 			);

@@ -7,23 +7,36 @@
 //
 
 #import "ViewController.h"
+#import "CZKeepAliveThread.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) CZKeepAliveThread *thread;
 @end
 
 @implementation ViewController
 
+- (IBAction)killThread:(id)sender {
+    [_thread kill];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CZKeepAliveThread *thread = [[CZKeepAliveThread alloc] init];
+    [thread executeTaskWithBlock:^{
+        NSLog(@"\n 👩executing task on %@\n", [NSThread currentThread]);
+    }];
+    
+    self.thread = thread;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [_thread executeTaskWithBlock:^{
+        NSLog(@"\n 👨executing task on %@\n", [NSThread currentThread]);
+    }];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
